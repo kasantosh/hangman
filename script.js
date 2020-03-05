@@ -11,7 +11,7 @@ const words = ['application', 'programming', 'interface', 'wizard'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-const correctLetters = ['r'];
+const correctLetters = [];
 const wrongLetters = [];
 
 // Show the hidden word
@@ -25,6 +25,12 @@ function displayWord() {
       )
       .join('')}
   `;
+
+  const innerWord = wordEl.innerText.replace(/\n/g, '');
+
+  if (innerWord === selectedWord) {
+    finalMessage.innerText = 'Congratulation! You won! 😃'
+  }
 }
 
 displayWord();
