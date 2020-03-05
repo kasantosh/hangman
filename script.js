@@ -29,7 +29,8 @@ function displayWord() {
   const innerWord = wordEl.innerText.replace(/\n/g, '');
 
   if (innerWord === selectedWord) {
-    finalMessage.innerText = 'Congratulation! You won! 😃'
+    finalMessage.innerText = 'Congratulation! You won! 😃';
+    popup.style.display = 'flex';
   }
 }
 
